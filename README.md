@@ -48,54 +48,12 @@
 
 ## 🔧 Installation & Configuration
 
-1.  **Clone the Repository**
+  **Clone the Repository**
     ```bash
     git clone [https://github.com/your-username/script-review.git](https://github.com/your-username/script-review.git)
     cd script-review
     ```
 
-2.  **Configure Application Properties**
-    Navigate to `src/main/resources/application.properties` and add your API configuration:
-
-    ```properties
-    spring.application.name=script-review
-    server.port=8080
-    
-    # Gemini API Configuration
-    gemini.api.key=YOUR_ACTUAL_API_KEY
-    gemini.api.url=[https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent](https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent)
-    
-    # File Upload Limits
-    spring.servlet.multipart.max-file-size=10MB
-    spring.servlet.multipart.max-request-size=10MB
-    ```
-
-3.  **Build the Project**
-    ```bash
-    mvn clean install
-    ```
-
-4.  **Run the Application**
-    ```bash
-    mvn spring-boot:run
-    ```
-
----
-
-## 🔌 API Usage
-
-### Analyze Script Endpoint
-
-* **URL:** `POST /api/v1/scripts/analyze`
-* **Body:** `multipart/form-data`
-    * `key`: `file`
-    * `value`: (Select your .xaml or .xml file)
-
-**Response:**
-* `Content-Type`: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
-* **Body:** Binary file (`report.xlsx`)
-
----
 
 ## 🧠 AI Response Format (Internal)
 
